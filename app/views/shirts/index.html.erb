@@ -10,9 +10,10 @@
 
 <div>
   <% @shirts.each do |shirt| %>
-    <%=image_tag shirt.image, :style => 'width:100px;height:100px;' %>
-    <h4><%=link_to shirt.name, shirt_path(shirt) %></h4>
-    <p><%=shirt.description%></p>
+    <h4>
+      <%=image_tag shirt.image, :style => 'width:100px;height:100px;' %>
+      <%=link_to shirt.name, shirt_path(shirt) %>
+    </h4>
   <% end %>
 </div>
 
