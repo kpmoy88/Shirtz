@@ -3,4 +3,7 @@
 
 <%=image_tag @shirt.image %>
 
-<%= link_to 'Edit', edit_shirt_path(@shirt) %>
+<h4>
+<%= link_to 'Edit Shirt', edit_shirt_path(@shirt) %> |
+<%= link_to 'Delete Shirt', shirt_path(@shirt), method: "DELETE", confirm: "Are you sure you want to delete this shirt?" %>
+</h4>

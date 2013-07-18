@@ -11,3 +11,9 @@
  *= require_self
  *= require_tree .
  */
+
+.notice {
+  background-color: yellow;
+  font-size: 20px;
+  font-weight: bold;
+}

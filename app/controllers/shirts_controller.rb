@@ -1,5 +1,5 @@
 class ShirtsController < ApplicationController
-  before_action :load_shirt, :only => [:edit, :update, :show]
+  before_action :load_shirt, :only => [:edit, :update, :show, :destroy]
 
   def index
     @shirts = Shirt.search_for(params[:query])
@@ -23,6 +23,13 @@ class ShirtsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @shirt.destroy
+    flash[:notice] = "The '#{@shirt.name}' shirt has been removed."
+
+    redirect_to shirts_path
   end
 
   def create
